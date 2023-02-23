@@ -14,25 +14,19 @@
  * limitations under the License.
  */
 
-package org.pixelexperience.settings.gestures.columbus;
+package com.sudoerz.settings.gestures.columbus;
 
 import android.content.Context;
-import android.content.IntentFilter;
-import com.android.settings.slices.SliceBackgroundWorker;
-import com.google.android.settings.gestures.columbus.ColumbusTogglePreferenceController;
-
+import com.android.settings.core.BasePreferenceController;
 import android.os.SystemProperties;
 
-public class ColumbusLowSensitivityPreferenceController extends ColumbusTogglePreferenceController {
-    public ColumbusLowSensitivityPreferenceController(Context context, String str) {
-        super(context, str, 1747);
+public class ColumbusLowSensitivityCategoryPreferenceController extends BasePreferenceController {
+    public ColumbusLowSensitivityCategoryPreferenceController(Context context, String key) {
+        super(context, key);
     }
 
-    @Override // com.android.settings.core.BasePreferenceController
+    @Override
     public int getAvailabilityStatus() {
-        if (SystemProperties.getBoolean("persist.columbus.use_ap_sensor", true)){
-            return UNSUPPORTED_ON_DEVICE;
-        }
-        return super.getAvailabilityStatus();
+        return SystemProperties.getBoolean("persist.columbus.use_ap_sensor", true) ? UNSUPPORTED_ON_DEVICE : AVAILABLE;
     }
 }

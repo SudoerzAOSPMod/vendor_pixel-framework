@@ -18,7 +18,7 @@ package com.google.android.systemui.columbus.dagger;
 
 import android.app.Service;
 
-import org.pixelexperience.systemui.columbus.ColumbusTargetRequestServiceWrapper;
+import com.sudoerz.systemui.columbus.ColumbusTargetRequestServiceWrapper;
 
 import dagger.Binds;
 import dagger.Module;

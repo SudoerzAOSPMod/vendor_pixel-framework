@@ -16,7 +16,7 @@
 
 package com.google.android.systemui.columbus.dagger;
 
-import static org.pixelexperience.systemui.Dependency.*;
+import static com.sudoerz.systemui.Dependency.*;
 
 import android.app.IActivityManager;
 import android.app.KeyguardManager;

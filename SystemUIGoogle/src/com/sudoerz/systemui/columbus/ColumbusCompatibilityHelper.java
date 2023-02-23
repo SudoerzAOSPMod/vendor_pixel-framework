@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.pixelexperience.systemui.columbus;
+package com.sudoerz.systemui.columbus;
 
 import android.os.SystemProperties;
 

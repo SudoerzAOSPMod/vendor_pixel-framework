@@ -16,7 +16,7 @@
 
 package com.google.android.systemui.assist.dagger;
 
-import static org.pixelexperience.systemui.Dependency.*;
+import static com.sudoerz.systemui.Dependency.*;
 
 import android.content.Context;
 import android.os.Handler;
