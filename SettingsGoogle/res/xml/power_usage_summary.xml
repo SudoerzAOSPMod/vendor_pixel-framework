@@ -69,6 +69,13 @@
         android:summary="@string/batt_chg_prot_preference_summary"
         android:fragment="com.android.settings.fuelgauge.SudoerzChgProtDashboardFragment"
         settings:controller="com.android.settings.fuelgauge.SudoerzChgProtPreferenceController"/>
+    
+    <Preference
+        android:key="sudoerz_wireless_rev_chg"
+        android:title="@string/rev_chg_preference_title"
+        android:summary="@string/rev_chg_preference_summary"
+        android:fragment="com.android.settings.fuelgauge.SudoerzRevChgDashboardFragment"
+        settings:controller="com.android.settings.fuelgauge.SudoerzRevChgPreferenceController"/>
 
     <com.android.settingslib.widget.FooterPreference
         android:key="power_usage_footer"
