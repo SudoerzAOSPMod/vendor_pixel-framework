@@ -58,6 +58,7 @@ import com.google.android.systemui.qs.tiles.ReverseChargingTile;
 // Custom
 import com.android.systemui.qs.tiles.CaffeineTile;
 import com.android.systemui.qs.tiles.DataSwitchTile;
+import com.android.systemui.qs.tiles.DcDimmingTile;
 
 import javax.inject.Inject;
 import javax.inject.Provider;
@@ -107,7 +108,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<ReverseChargingTile> reverseChargingTileProvider,
             Provider<CaffeineTile> caffeineTileProvider,
             Provider<SUReverseChargingTile> suReverseChargingTileProvider,
-            Provider<DataSwitchTile> dataSwitchTile) {
+            Provider<DataSwitchTile> dataSwitchTile,
+            Provider<DcDimmingTile> dcDimTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -142,7 +144,8 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 dreamTileProvider,
                 caffeineTileProvider,
                 suReverseChargingTileProvider,
-                dataSwitchTile);
+                dataSwitchTile,
+                dcDimTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
