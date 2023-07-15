@@ -24,6 +24,11 @@
             settings:useAdminDisabledSummary="true"
             settings:userRestriction="no_config_brightness" />
 
+        <com.android.settings.display.HBMPreference
+            android:key="hbm_entry"
+            android:title="@string/hbm_title"
+            android:fragment="com.android.settings.display.HBMSettings"
+            settings:controller="com.android.settings.display.HBMPreferenceController"/>
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -161,6 +166,13 @@
             android:key="tap_to_wake"
             android:summary="@string/tap_to_wake_summary"
             android:title="@string/tap_to_wake" />
+        
+        <Preference
+            android:title="@string/notchmode_display_settings_title"
+            android:key="notch_mode_settings"
+            android:summary="@string/notchmode_display_settings_summary"
+            android:fragment="com.android.settings.display.notch.DisplaySettings"
+            settings:controller="com.android.settings.display.notch.NotchModeSettingsPreferenceController" />
 
         <ListPreference
             android:key="theme"
